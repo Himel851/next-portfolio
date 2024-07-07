@@ -2,24 +2,6 @@ import React from 'react';
 
 const Skill = () => {
     const skills = {
-        Languages: [
-            {
-                name: 'C',
-                src: '/images/c.png'
-            },
-            {
-                name: 'C++',
-                src: '/images/cpp.png'
-            },
-            {
-                name: 'JavaScript',
-                src: '/images/javascript.png'
-            },
-            {
-                name: 'TypeScript',
-                src: '/images/typescript.png'
-            }
-        ],
         Frontend: [
             {
                 name: 'React',
@@ -49,7 +31,26 @@ const Skill = () => {
                 name: 'jQuery',
                 src: '/images/jquery.png'
             }
-        ]
+        ],
+        Languages: [
+            {
+                name: 'C',
+                src: '/images/c.png'
+            },
+            {
+                name: 'C++',
+                src: '/images/cpp.png'
+            },
+            {
+                name: 'JavaScript',
+                src: '/images/javascript.png'
+            },
+            {
+                name: 'TypeScript',
+                src: '/images/typescript.png'
+            }
+        ],
+       
     };
 
     return (
@@ -64,7 +65,7 @@ const Skill = () => {
                         <h2 className="text-2xl font-bold mb-4">{section}</h2>
                         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                             {skills[section].map((skill, index) => (
-                                <div key={index} className="shadow-md shadow-[#040c16] hover:scale-110 duration-500 p-4 rounded-md bg-white">
+                                <div key={index} className="shadow-md shadow-[#040c16] hover:scale-110 duration-500 z-10 p-4 rounded-md bg-white">
                                     <img className="w-20 mx-auto" src={skill.src} alt={skill.name} />
                                     <p className="my-4 text-center">{skill.name}</p>
                                 </div>

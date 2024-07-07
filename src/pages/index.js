@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import HeroSection from "@/components/HeroSection";
-import Skill from "@/components/Skill/Skill";
+import Skill from "@/components/Skill";
+import Projects from "@/components/Projects";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -10,6 +11,7 @@ export default function Home() {
       <div>
           <HeroSection />
           <Skill />
+          <Projects />
           {/* https://github.com/Infvyr/nextjs-portfolio
           https://github.com/Infvyr/Portfolio
           https://github.com/iamshiv007/NextJS-Portfolio
