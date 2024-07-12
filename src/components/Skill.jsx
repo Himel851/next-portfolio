@@ -54,18 +54,18 @@ const Skill = () => {
     };
 
     return (
-        <div name="skills" className="w-full h-fit bg-[#0a192f] text-gray-300 p-8">
-            <div className="max-w-[1000px] mx-auto flex flex-col justify-center w-full h-full">
+        <div name="skills" className="w-full h-fit bg-[#050816] text-gray-300 p-8">
+            <div className="base-container  flex flex-col justify-center ">
                 <div>
                     <p className="text-4xl font-bold inline border-b-4 border-[#FC9A03]">Skills</p>
-                    <p className="py-4">These are the technologies I've worked with</p>
+                    <p className="mt-4">These are the technologies I've worked with</p>
                 </div>
                 {Object.keys(skills).map((section) => (
-                    <div key={section} className="my-8">
+                    <div key={section} className="mt-8">
                         <h2 className="text-2xl font-bold mb-4">{section}</h2>
-                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                        <div className="grid grid-cols-4z sm:grid-cols-4 gap-4">
                             {skills[section].map((skill, index) => (
-                                <div key={index} className="shadow-md shadow-[#040c16] hover:scale-110 duration-500 z-10 p-4 rounded-md bg-white">
+                                <div key={index} className="shadow-md shadow-[#040c16] hover:scale-105 duration-500 z-10 p-4 rounded-md bg-white">
                                     <img className="w-20 mx-auto" src={skill.src} alt={skill.name} />
                                     <p className="my-4 text-center">{skill.name}</p>
                                 </div>

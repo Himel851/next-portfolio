@@ -4,7 +4,7 @@ import { HiArrowNarrowRight } from "react-icons/hi";
 
 const HeroSection = () => {
     return (
-        <div name="home" className="w-full h-screen bg-[#0a192f]">
+        <div name="home" className="w-full h-screen bg-[#050816]">
             {/* Container */}
             <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
                 <p className="text-3xl text-[#FC9A03]">Hi, My name is</p>
