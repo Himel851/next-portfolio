@@ -4,6 +4,11 @@ import React from 'react';
 
 const projectData = [
     {
+        image: './images/deshify.png',
+        title: 'Deshify - Ecommerce App',
+        websiteLink: 'https://deshify.com/',
+    },
+    {
         image: './images/hotel.jpg',
         title: 'Hotel Booking App',
         websiteLink: 'https://himelhotel851.netlify.app/',
@@ -44,7 +49,7 @@ const projectData = [
 
 const Projects = () => {
     return (
-        <div name='project' className='w-full md:h-screen text-gray-300 bg-[#0a192f]'>
+        <div name='project' className='w-full  text-gray-300 bg-[#0a192f]'>
             <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
                 <div className='pb-8'>
                     <p className='text-4xl font-bold inline border-b-4 text-gray-300 border-[#FC9A03]'>
@@ -54,10 +59,10 @@ const Projects = () => {
                 </div>
 
                 {/* Container */}
-                <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4'>
+                <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4'>
                     {projectData?.map((project, index) => (
                         <div
-                        key={index}
+                            key={index}
                             style={{ backgroundImage: `url(${project?.image})` }}
                             className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
                         >
@@ -71,11 +76,12 @@ const Projects = () => {
                                             Website
                                         </button>
                                     </Link>
-                                    <Link href={project?.githubLink} target="_blank" rel="noopener noreferrer">
+                                    {project?.githubLink && <Link href={project?.githubLink} target="_blank" rel="noopener noreferrer">
                                         <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                                             Github
                                         </button>
-                                    </Link>
+                                    </Link>}
+                                   
                                 </div>
                             </div>
                         </div>
