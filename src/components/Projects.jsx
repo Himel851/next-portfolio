@@ -68,8 +68,6 @@ const projects = [
             },
         ],
         image: "/images/deshify.png",
-        source_code_link:
-            "https://github.com/omunite215/FCC-Random-Quote-Generator",
         netlify_link: "https://randomquotegeneratorbyom.netlify.app/",
     },
     {
@@ -165,7 +163,7 @@ const projects = [
 
 const Projects = () => {
     return (
-        <div className='base-container  text-gray-300 '>
+        <div className='base-container  text-gray-300 mt-20 '>
             <div className=' flex flex-col justify-center '>
                 <motion.div variants={textVariant()}>
                     <p className='text-4xl font-bold inline border-b-4 text-gray-300 border-[#FC9A03]'>Project</p>

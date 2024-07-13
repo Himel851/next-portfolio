@@ -22,7 +22,7 @@ const ProjectCard = ({ index, project }) => {
                     />
 
                     <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-                        <Link
+                        {source_code_link && <Link
                             href={source_code_link}
                             target="_blank"
                             className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
@@ -34,7 +34,8 @@ const ProjectCard = ({ index, project }) => {
                                 alt="source-code"
                                 className="object-contain"
                             />
-                        </Link>
+                        </Link>}
+
                         <Link
                             href={netlify_link}
                             target="_blank"
@@ -60,7 +61,7 @@ const ProjectCard = ({ index, project }) => {
                     {tags.map((tag) => (
                         <p
                             key={`${name}-${tag.name}`}
-                            className={`text-[16px] ${tag.color}`}
+                            className={`text-[20px] ${tag.color}`}
                         >
                             #{tag.name}
                         </p>
