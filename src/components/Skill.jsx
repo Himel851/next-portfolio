@@ -78,7 +78,7 @@ const Skill = () => {
             <div className="base-container  flex flex-col justify-center ">
                 <div>
                     <p className="text-4xl font-bold inline border-b-4 border-[#FC9A03]">Skills</p>
-                    <p className="mt-4">These are the technologies I've worked with</p>
+                    <p className="mt-4">These are the technologies I have worked with</p>
                 </div>
                 {Object.keys(skills).map((section) => (
                     <div key={section} className="mt-8">
