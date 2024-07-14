@@ -21,7 +21,7 @@ const Skill = () => {
                 name: 'React Router',
                 src: '/images/react-router.png'
             },
-            
+
             {
                 name: 'Tailwind CSS',
                 src: '/images/TAILWIND.png'
@@ -69,15 +69,15 @@ const Skill = () => {
                 src: '/images/ts.png'
             }
         ],
-       
+
     };
 
 
     return (
-        <div name="skills" className="mt-40 bg-[#050816] text-gray-300 base-padding">
+        <div id="skills" className="bg-[#050816] text-gray-300 base-padding">
             <div className="base-container  flex flex-col justify-center ">
                 <div>
-                    <p className="text-4xl font-bold inline border-b-4 border-[#FC9A03]">Skills</p>
+                    <p className="text-4xl font-bold inline border-b-4 border-pink-600">Skills</p>
                     <p className="mt-4">These are the technologies I have worked with</p>
                 </div>
                 {Object.keys(skills).map((section) => (

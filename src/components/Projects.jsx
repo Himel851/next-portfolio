@@ -80,13 +80,13 @@ const projects = [
         name: "Travel World",
         description:
             "Travel World features customizable categories, advanced filters, detailed hotel pages, and integrated travel information and navigation.",
-            tags: [
-                {name: "next.js"},
-                {name: "tailwind css"},
-                {name: "swiper.js"},
-                {name: "react-slick-slider"},
-    
-            ],
+        tags: [
+            { name: "next.js" },
+            { name: "tailwind css" },
+            { name: "swiper.js" },
+            { name: "react-slick-slider" },
+
+        ],
         image: "/images/travel.png",
         netlify_link: "https://himel851-travel-world.netlify.app/",
     },
@@ -95,11 +95,11 @@ const projects = [
         description:
             "Developed a photo editing site with FAQs, service details, testimonials, and a portfolio gallery.",
         tags: [
-            {name: "next.js"},
-            {name: "tailwind css"},
-            {name: "react-slick"},
-            {name: "react-compare-slider"},
-            {name: "luicide-react"},
+            { name: "next.js" },
+            { name: "tailwind css" },
+            { name: "react-slick" },
+            { name: "react-compare-slider" },
+            { name: "luicide-react" },
         ],
         image: "/images/black-fox.png",
         netlify_link: "https://hoobankbyom.netlify.app/",
@@ -109,10 +109,10 @@ const projects = [
 
 const Projects = () => {
     return (
-        <div className='base-container  text-gray-300 mt-20 base-padding '>
+        <div id="project" className='base-container  text-gray-300 mt-20 base-padding pb-52 '>
             <div className=' flex flex-col justify-center '>
                 <motion.div variants={textVariant()}>
-                    <p className='text-4xl font-bold inline border-b-4 text-gray-300 border-[#FC9A03]'>Project</p>
+                    <p className='text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600'>Project</p>
                     <p className='py-6'> Check out some of my recent work</p>
                 </motion.div>
 
@@ -125,7 +125,7 @@ const Projects = () => {
                     ))}
                 </div>
             </div>
-            
+
         </div>
         // <div name='project' className='w-full  text-gray-300 bg-[#050816]'>
         //     <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>

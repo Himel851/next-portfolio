@@ -2,17 +2,18 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
+import { Link as ScrollLink } from "react-scroll";
 
-const Navbar = () => {
+const Navbar = ({ menuItems }) => {
     const [nav, setNav] = useState(false);
     const handleClick = () => setNav(!nav);
+    const [activeSection, setActiveSection] = useState(menuItems[0].href);
 
-    const menuItems = [
-        { name: "Home", href: "home" },
-        { name: "About", href: "about" },
-        { name: "Skills", href: "skills" },
-        { name: "Project", href: "project" },
-    ];
+    const handleSetActive = (section) => {
+        setActiveSection(section);
+    };
+
+
 
     const socialIcons = [
         {
@@ -28,7 +29,7 @@ const Navbar = () => {
             label: "Github",
         },
         {
-            href: "https://drive.google.com/file/d/1_EEl-IJTNr8Az29TibjFwbI9K4OFxIPU/view?usp=sharing",
+            href: "https://drive.google.com/file/d/1xrgaGEAsM6Mfl8Tpl4Bm1mA7ry_TNZFe/view?usp=drive_linkhttps://drive.google.com/file/d/1_EEl-IJTNr8Az29TibjFwbI9K4OFxIPU/view?usp=sharing",
             bg: "bg-[#6f39eb]",
             icon: <BsFillPersonLinesFill size={30} />,
             label: "Resume",
@@ -36,29 +37,48 @@ const Navbar = () => {
     ];
 
     return (
-        <div className="fixed  w-full h-[80px] flex justify-center items-center px-4 bg-[#050816] z-50 text-gray-300">
+        <div className="fixed  w-full h-[80px] flex justify-center items-center px-4 bg-[#050816] z-50 border-b-[1px] border-[#7f7d7d7a] text-gray-300">
             <div></div>
 
             {/* Menu */}
-            <ul className="hidden md:flex">
+            <ul className="flex">
                 {menuItems.map((item, index) => (
-                    <li key={index}>
-                        <Link
-                            href={item.href}
+                    <li
+                        key={index}
+
+                    >
+                        <ScrollLink
+                            to={item.href}
+                            spy={true}
                             smooth={true}
                             duration={500}
-                            className="hover:border-b-4 border-[#FC9A03] "
+                            offset={-70}
+                            className={`cursor-pointer ${activeSection === item.href ? "border-b-4 border-pink-600" : ""
+                                }`}
+                            activeClass="active"
+                            onSetActive={() => handleSetActive(item.href)}
                         >
                             {item.name}
-                        </Link>
+                        </ScrollLink>
                     </li>
                 ))}
+
+                {/* add resume button  */}
+                <li>
+                    <Link
+                        href="https://drive.google.com/file/d/1xrgaGEAsM6Mfl8Tpl4Bm1mA7ry_TNZFe/view?usp=drive_link"
+                        target="_blank"
+                        className="group border-2 border-pink-600 px-6 py-3 my-2 items-center hover:bg-pink-600 hover:border-pink-600 rounded-md"
+                    >
+                        Resume
+                    </Link>
+                </li>
             </ul>
 
             {/* Menu Icon */}
-            <div onClick={handleClick} className="md:hidden z-[99999]">
+            {/* <div onClick={handleClick} className="md:hidden z-[99999]">
                 {!nav ? <FaBars /> : <FaTimes />}
-            </div>
+            </div> */}
 
             {/* Mobile View */}
             <ul
@@ -95,13 +115,13 @@ const Navbar = () => {
                             key={index}
                             className={`w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 ${icon.bg}`}
                         >
-                            <a
+                            <Link
                                 className="flex justify-between items-center w-full text-gray-300"
                                 href={icon.href}
                                 target="_blank"
                             >
                                 {icon.label} {icon.icon}
-                            </a>
+                            </Link>
                         </li>
                     ))}
                 </ul>
