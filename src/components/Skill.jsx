@@ -74,7 +74,7 @@ const Skill = () => {
 
 
     return (
-        <div name="skills" className="w-full h-fit bg-[#050816] text-gray-300 p-8">
+        <div name="skills" className="mt-40 bg-[#050816] text-gray-300 base-padding">
             <div className="base-container  flex flex-col justify-center ">
                 <div>
                     <p className="text-4xl font-bold inline border-b-4 border-[#FC9A03]">Skills</p>
@@ -83,7 +83,7 @@ const Skill = () => {
                 {Object.keys(skills).map((section) => (
                     <div key={section} className="mt-8">
                         <h2 className="text-2xl font-bold mb-4">{section}</h2>
-                        <div className="grid grid-cols-4 sm:grid-cols-8 gap-4">
+                        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-7 xl:grid-cols-8 gap-4">
                             {skills[section].map((skill, index) => (
                                 <div key={index} className="shadow-md shadow-[#040c16] hover:scale-105 duration-500 z-10 p-4 rounded-md bg-[#151030]">
                                     <img className="w-10 lg:w-20 mx-auto" src={skill.src} alt={skill.name} />

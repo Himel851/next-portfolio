@@ -18,6 +18,10 @@
     @apply container !max-w-[1500px]  mx-auto px-2 md:px-0 ;
 }
 
+.base-padding{
+    @apply px-3 lg:px-0;
+}
+
 * {
     margin: 0;
     padding: 0;

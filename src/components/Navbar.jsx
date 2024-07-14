@@ -36,7 +36,7 @@ const Navbar = () => {
     ];
 
     return (
-        <div className="fixed  w-full h-[80px] flex justify-between items-center px-4 bg-[#050816] z-50 text-gray-300">
+        <div className="fixed  w-full h-[80px] flex justify-center items-center px-4 bg-[#050816] z-50 text-gray-300">
             <div></div>
 
             {/* Menu */}
@@ -47,7 +47,7 @@ const Navbar = () => {
                             href={item.href}
                             smooth={true}
                             duration={500}
-                            className="hover:border-b-4 border-[#FC9A03]"
+                            className="hover:border-b-4 border-[#FC9A03] "
                         >
                             {item.name}
                         </Link>
