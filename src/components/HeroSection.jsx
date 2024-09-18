@@ -7,7 +7,7 @@ const HeroSection = () => {
   return (
     <div id="home" className="py-20 md:py-56 bg-[#050816] base-padding">
       <div className="base-container">
-        <div className="flex flex-col-reverse md:flex-row justify-center items-center gap-8 mx-4 md:mx-20">
+        <div className="flex flex-col-reverse md:flex-row justify-center items-center gap-8 ">
           <div className="w-full md:w-1/2 text-center md:text-left">
             <div className="text-white flex flex-col items-center md:items-start">
               <p className="text-lg md:text-xl">WELCOME TO MY WORLD</p>

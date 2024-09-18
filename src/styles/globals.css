@@ -15,7 +15,7 @@
 }
 
 .base-container {
-    @apply container !max-w-[1500px]  mx-auto px-2 md:px-0 ;
+    @apply container !max-w-[1500px]  mx-auto px-4 md:px-20 ;
 }
 
 .base-padding{

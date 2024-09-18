@@ -9,7 +9,11 @@ const ProjectCard = ({ index, project }) => {
     project;
   return (
     <motion.div whileHover={{ scale: 1.03 }}>
-      <div className="bg-[#151030] p-2 rounded-2xl  w-full">
+      <Link
+        href={netlify_link}
+        target="_blank"
+        className="bg-[#151030]  rounded-2xl  w-full"
+      >
         <div className="relative w-full h-[230px]">
           <Image
             src={image}
@@ -19,7 +23,7 @@ const ProjectCard = ({ index, project }) => {
             className="w-full h-full object-cover rounded-2xl"
           />
 
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+          {/* <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
             {source_code_link && (
               <Link
                 href={source_code_link}
@@ -49,7 +53,7 @@ const ProjectCard = ({ index, project }) => {
                 className="object-contain"
               />
             </Link>
-          </div>
+          </div> */}
         </div>
 
         <div className="mt-2">
@@ -63,13 +67,13 @@ const ProjectCard = ({ index, project }) => {
           {tags.map((tag, index) => (
             <div
               key={index}
-              className="badge shadow-lg shadow-[#5597a7c7] bg-white border-0 font-semibold text-[#000000c2] px-3 py-1 rounded-full"
+              className="badge bg-[#323a3f] border-0 font-semibold text-white px-3 py-1 rounded-full"
             >
               {tag.name}
             </div>
           ))}
         </div>
-      </div>
+      </Link>
     </motion.div>
   );
 };
